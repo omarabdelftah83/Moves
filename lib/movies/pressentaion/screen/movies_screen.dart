@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled3/core/servies/servies_locator.dart';
+
 //import 'package:movies_apps/core/network/api_constance.dart';
 // import 'package:movies_apps/movies/presentation/screens/dummy.dart';
 // import 'package:shimmer/shimmer.dart';
@@ -15,26 +16,24 @@ import 'package:untitled3/movies/pressentaion/components/popular_component.dart'
 import 'package:untitled3/movies/pressentaion/components/red_top_component.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_block.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_event.dart';
-import '';
-
 
 class MainMoviesScreen extends StatelessWidget {
   const MainMoviesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-       return BlocProvider(create:
-        (BuildContext context)=>serLoc<MoviesBlock>()..add(GetNowplayingMoviesEvent())..add(GetPopluerMoviesEvent())..add(GetTopRatedMoviesEvent()),
-
-        child: Scaffold(
+    return BlocProvider(
+      create: (BuildContext context) => serLoc<MoviesBlock>()
+        ..add(GetNowplayingMoviesEvent())
+        ..add(GetPopluerMoviesEvent())
+        ..add(GetTopRatedMoviesEvent()),
+      child: Scaffold(
         body: SingleChildScrollView(
           key: const Key('movieScrollView'),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-             NowPlayingComponent(),
+              NowPlayingComponent(),
               Container(
                 margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
                 child: Row(
@@ -113,6 +112,6 @@ class MainMoviesScreen extends StatelessWidget {
           ),
         ),
       ),
-    )
-    ;
-  }}
+    );
+  }
+}

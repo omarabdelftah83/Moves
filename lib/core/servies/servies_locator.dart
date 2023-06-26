@@ -21,9 +21,9 @@ class ServiesLcator{
       serLoc.registerLazySingleton(() =>GetNowPlayingMoviesUsercase(serLoc()));
       serLoc.registerLazySingleton(() =>GetpopularMoviesUsercase(serLoc()));
       serLoc.registerLazySingleton(() =>TopratedMoviesUsercase(serLoc()));
-    //  serLoc.registerLazySingleton(() => GetMovieDataliesUseCase(serLoc()));
+      serLoc.registerLazySingleton(() => GetMovieDataliesUseCase(serLoc()));
 
     /////////Ingection with the bloc
     serLoc.registerFactory(() => MoviesBlock(serLoc(),serLoc(),serLoc(),));
-  // serLoc.registerFactory(() => MovieDataliesBloc(serLoc()));
+   serLoc.registerFactory(() => MovieDataliesBloc(serLoc()));
 }}

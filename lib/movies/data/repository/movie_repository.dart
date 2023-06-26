@@ -45,16 +45,16 @@ import 'package:untitled3/movies/domain/repository/base_movies_repository.dart';
         throw UnimplementedError();
 
       }
-  }}
+  }
 
-  // @override
-  // Future<Either<Faluiare, MovieDatails>> getMovieDatalies(int id) async{
-  //   final result=await  baseMovieRemoteDatasourse.getDaliesMovie( id);
-  //   try{return right(result);}
-  //   on ServerExcepion catch (faluaire){
-  //     left(ServerFaluiare(faluaire.errorMasage.stutesMassage));
-  //   throw UnimplementedError();
-  // }}}
+  @override
+  Future<Either<Faluiare, MovieDatails>> getMovieDatalies(int id) async{
+    final result=await  baseMovieRemoteDatasourse.getDaliesMovie( id);
+    try{return right(result);}
+    on ServerExcepion catch (faluaire){
+      left(ServerFaluiare(faluaire.errorMasage.stutesMassage));
+    throw UnimplementedError();
+  }}}
 
   // @override
   // Future<Either<Faluiare, List<MovieRecomandation>>> getMovieRecomandation() async{

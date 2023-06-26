@@ -224,46 +224,46 @@
 //       return '${minutes}m';
 //     }
 //   }
-  //
-  // Widget _showRecommendations() {
-  //   return SliverGrid(
-  //     delegate: SliverChildBuilderDelegate(
-  //       (context, index) {
-  //         final recommendation = recommendations[index];
-  //         return FadeInUp(
-  //           from: 20,
-  //           duration: const Duration(milliseconds: 500),
-  //           child: ClipRRect(
-  //             borderRadius: const BorderRadius.all(Radius.circular(4.0)),
-  //             child: CachedNetworkImage(
-  //               imageUrl: AppConstance.imageUrl(recommendation.backdropPath),
-  //               placeholder: (context, url) => Shimmer.fromColors(
-  //                 baseColor: Colors.grey[850]!,
-  //                 highlightColor: Colors.grey[800]!,
-  //                 child: Container(
-  //                   height: 170.0,
-  //                   width: 120.0,
-  //                   decoration: BoxDecoration(
-  //                     color: Colors.black,
-  //                     borderRadius: BorderRadius.circular(8.0),
-  //                   ),
-  //                 ),
-  //               ),
-  //               errorWidget: (context, url, error) => const Icon(Icons.error),
-  //               height: 180.0,
-  //               fit: BoxFit.cover,
-  //             ),
-  //           ),
-  //         );
-  //       },
-  //       childCount: recommendationDummy.length,
-  //     ),
-  //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-  //       mainAxisSpacing: 8.0,
-  //       crossAxisSpacing: 8.0,
-  //       childAspectRatio: 0.7,
-  //       crossAxisCount: 3,
-  //     ),
-  //   );
-  // }
-//}
+//
+//   Widget _showRecommendations() {
+//     return SliverGrid(
+//       delegate: SliverChildBuilderDelegate(
+//         (context, index) {
+//           final recommendation = recommendations[index];
+//           return FadeInUp(
+//             from: 20,
+//             duration: const Duration(milliseconds: 500),
+//             child: ClipRRect(
+//               borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+//               child: CachedNetworkImage(
+//                 imageUrl: AppConstance.imageUrl(recommendation.backdropPath),
+//                 placeholder: (context, url) => Shimmer.fromColors(
+//                   baseColor: Colors.grey[850]!,
+//                   highlightColor: Colors.grey[800]!,
+//                   child: Container(
+//                     height: 170.0,
+//                     width: 120.0,
+//                     decoration: BoxDecoration(
+//                       color: Colors.black,
+//                       borderRadius: BorderRadius.circular(8.0),
+//                     ),
+//                   ),
+//                 ),
+//                 errorWidget: (context, url, error) => const Icon(Icons.error),
+//                 height: 180.0,
+//                 fit: BoxFit.cover,
+//               ),
+//             ),
+//           );
+//         },
+//         childCount: recommendationDummy.length,
+//       ),
+//       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+//         mainAxisSpacing: 8.0,
+//         crossAxisSpacing: 8.0,
+//         childAspectRatio: 0.7,
+//         crossAxisCount: 3,
+//       ),
+//     );
+//   }
+// }

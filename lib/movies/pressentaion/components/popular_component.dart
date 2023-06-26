@@ -11,6 +11,8 @@ import 'package:untitled3/core/utiles/dummy.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_block.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_state.dart';
 
+import '../screen/movie_datails_screen.dart';
+
 class PopularComponent extends StatelessWidget {
   const PopularComponent({Key? key}) : super(key: key);
 
@@ -36,6 +38,13 @@ class PopularComponent extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: InkWell(
                   onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                MovieDatailsScreen(
+                                  id: movie.id,
+                                )));
                     /// TODO : NAVIGATE TO  MOVIE DETAILS
                   },
                   child: ClipRRect(
@@ -44,7 +53,7 @@ class PopularComponent extends StatelessWidget {
                     child: CachedNetworkImage(
                       width: 120.0,
                       fit: BoxFit.cover,
-                      imageUrl: AppConstance.imageUrl(movie.backdropPath!),
+                      imageUrl: AppConstance.imageUrl(movie.backdropPath),
                       placeholder: (context, url) => Shimmer.fromColors(
                         baseColor: Colors.grey[850]!,
                         highlightColor: Colors.grey[800]!,

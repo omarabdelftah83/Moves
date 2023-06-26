@@ -32,7 +32,13 @@ class TopRatedComponent extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: InkWell(
                   onTap: () {
-                //    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=> MovieDatailsScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                MovieDatailsScreen(
+                                  id: movie.id,
+                                )));
                   },
                   child: ClipRRect(
                     borderRadius:
@@ -40,7 +46,7 @@ class TopRatedComponent extends StatelessWidget {
                     child: CachedNetworkImage(
                       width: 120.0,
                       fit: BoxFit.cover,
-                      imageUrl: AppConstance.imageUrl(movie.backdropPath!),
+                      imageUrl: AppConstance.imageUrl(movie.backdropPath),
                       placeholder: (context, url) => Shimmer.fromColors(
                         baseColor: Colors.grey[850]!,
                         highlightColor: Colors.grey[800]!,
