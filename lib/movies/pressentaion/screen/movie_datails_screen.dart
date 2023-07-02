@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled3/core/servies/servies_locator.dart';
 import 'package:untitled3/core/utiles/app_constance.dart';
+import 'package:untitled3/core/utiles/app_string.dart';
 import 'package:untitled3/movies/domain/entities/genres.dart';
 import 'package:untitled3/movies/domain/entities/movie_datails.dart';
 import 'package:untitled3/movies/pressentaion/controller/movie_datailes_event.dart';
@@ -186,7 +187,7 @@ class MovieDatailsScreen extends StatelessWidget {
                       from: 20,
                       duration: const Duration(milliseconds: 500),
                       child: Text(
-                        'More like this'.toUpperCase(),
+                        AppString.moreLike.toUpperCase(),
                         style: const TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.w500,

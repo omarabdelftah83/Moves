@@ -6,12 +6,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:untitled3/core/servies/servies_locator.dart';
 import 'package:untitled3/core/servies/servies_locator.dart';
 import 'package:untitled3/core/utiles/app_constance.dart';
+import 'package:untitled3/core/utiles/app_string.dart';
 import 'package:untitled3/core/utiles/dummy.dart';
 import 'package:untitled3/movies/domain/usercases/get%20_nowplaying_movies_usercase.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_block.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_state.dart';
 import 'package:untitled3/movies/pressentaion/screen/movie_datails_screen.dart';
-import 'package:untitled3/movies/pressentaion/screen/movie_detail_screen.dart';
+//import 'package:untitled3/movies/pressentaion/screen/movie_detail_screen.dart';
 
 import '../../domain/entities/movie_datails.dart';
 
@@ -97,7 +98,7 @@ class NowPlayingComponent extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 4.0),
                                     Text(
-                                      'Now Playing'.toUpperCase(),
+                                      AppString.nowPlaying.toUpperCase(),
                                       style: const TextStyle(
                                         fontSize: 16.0,
                                       ),
@@ -128,6 +129,33 @@ class NowPlayingComponent extends StatelessWidget {
         });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //);
 // return FadeIn(
 //   duration: const Duration(milliseconds: 100),

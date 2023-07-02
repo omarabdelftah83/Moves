@@ -13,7 +13,7 @@ import 'package:untitled3/movies/domain/repository/base_movies_repository.dart';
 
   @override
   Future<Either< Faluiare,List<Movie>>> getNowPlaying()async {
-    final result= await  baseMovieRemoteDatasourse.getNowPlayingMovie();
+    final result= await  baseMovieRemoteDatasourse.getNowPlayingMovieDatasourse();
     try{
       return right(result);
        }
@@ -27,7 +27,7 @@ import 'package:untitled3/movies/domain/repository/base_movies_repository.dart';
 
   @override
   Future<Either<Faluiare, List<Movie>>> getPopularMovies()async {
-    final result = await baseMovieRemoteDatasourse.getpopularMovie();
+    final result = await baseMovieRemoteDatasourse.getpopularMovieDatasourse();
     try {
       return right(result);
     }
@@ -38,7 +38,7 @@ import 'package:untitled3/movies/domain/repository/base_movies_repository.dart';
 
     @override
     Future<Either<Faluiare, List<Movie>>> getTopRatedMovies() async{
-      final result=await  baseMovieRemoteDatasourse.getTopRatedMovie();
+      final result=await  baseMovieRemoteDatasourse.getTopRatedMovieDatasourse();
       try{return right(result);}
       on ServerExcepion catch (faluaire){
         left(ServerFaluiare(faluaire.errorMasage.stutesMassage));
@@ -49,18 +49,11 @@ import 'package:untitled3/movies/domain/repository/base_movies_repository.dart';
 
   @override
   Future<Either<Faluiare, MovieDatails>> getMovieDatalies(int id) async{
-    final result=await  baseMovieRemoteDatasourse.getDaliesMovie( id);
+    final result=await  baseMovieRemoteDatasourse.getDaliesMovieDatasourse( id);
     try{return right(result);}
     on ServerExcepion catch (faluaire){
       left(ServerFaluiare(faluaire.errorMasage.stutesMassage));
     throw UnimplementedError();
   }}}
 
-  // @override
-  // Future<Either<Faluiare, List<MovieRecomandation>>> getMovieRecomandation() async{
-  //   final result=await  baseMovieRemoteDatasourse.getRecomandationMovie( );
-  //   try{return right(result);}
-  //   on ServerExcepion catch (faluaire){
-  //     left(ServerFaluiare(faluaire.errorMasage.stutesMassage));
-  //   throw UnimplementedError();
-  // }}}
+

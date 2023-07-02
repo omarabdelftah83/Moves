@@ -73,12 +73,6 @@ import 'package:untitled3/movies/pressentaion/controller/movies_state.dart';
 
 
 
-//  on<GetNowplayingMoviesEvent>((event, emit) async{
-//  BaseMovieRemoteDatasourse baseMovieRemoteDatasourse=MovieRemoteDatasourse();
-//  BaseMoviesRepository baseMoviesRepository=MovieRepository(baseMovieRemoteDatasourse);
-// final result= await GetNowPlayingMoviesUsercase(baseMoviesRepository).exeute();
-
-
 
 
 

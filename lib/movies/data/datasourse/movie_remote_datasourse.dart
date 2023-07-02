@@ -12,10 +12,10 @@ import 'package:untitled3/movies/data/models/movie_model.dart';
 //import 'package:untitled3/movies/domain/entities/movie_datails.dart';
 
 abstract class BaseMovieRemoteDatasourse{
-  Future<List<MovieModel>> getNowPlayingMovie();
-  Future<List<MovieModel>> getpopularMovie();
-  Future<List<MovieModel>> getTopRatedMovie();
-  Future<MovieModelDateils>getDaliesMovie(int id);
+  Future<List<MovieModel>> getNowPlayingMovieDatasourse();
+  Future<List<MovieModel>> getpopularMovieDatasourse();
+  Future<List<MovieModel>> getTopRatedMovieDatasourse();
+  Future<MovieModelDateils>getDaliesMovieDatasourse(int id);
  // Future<List<MovieModelRecomandation>> getRecomandationMovie();
 }
 
@@ -23,7 +23,7 @@ abstract class BaseMovieRemoteDatasourse{
  class MovieRemoteDatasourse implements BaseMovieRemoteDatasourse{
 
   @override
- Future<List<MovieModel>> getNowPlayingMovie()async {
+ Future<List<MovieModel>> getNowPlayingMovieDatasourse()async {
     final response = await Dio().get(AppConstance.nowPlayingMoviesPath);
    // print("test==${response.data}");
     if (response.statusCode == 200) {
@@ -39,7 +39,7 @@ abstract class BaseMovieRemoteDatasourse{
   }
 
   @override
-  Future<List<MovieModel>>getpopularMovie()async{
+  Future<List<MovieModel>>getpopularMovieDatasourse()async{
     final response= await Dio().get(AppConstance.popularMoviesPath);
     if (response.statusCode == 200) {
       //print(response);
@@ -51,7 +51,7 @@ abstract class BaseMovieRemoteDatasourse{
   }
 
   @override
-  Future<List<MovieModel>>getTopRatedMovie()async {
+  Future<List<MovieModel>>getTopRatedMovieDatasourse()async {
     final response = await Dio().get(AppConstance.topRatedMoviesPath);
     if (response.statusCode == 200) {
       ///print(response);
@@ -62,7 +62,7 @@ abstract class BaseMovieRemoteDatasourse{
     }
   }
   @override
-  Future<MovieModelDateils> getDaliesMovie( int id) async{
+  Future<MovieModelDateils> getDaliesMovieDatasourse( int id) async{
     final  response=await Dio().get(AppConstance.getDatailesMoviesPath(id));
     if(response.statusCode==200){
       log('=============omar==$response======');
