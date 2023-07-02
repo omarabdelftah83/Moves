@@ -3,12 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:untitled3/core/servies/servies_locator.dart';
-import 'package:untitled3/core/servies/servies_locator.dart';
 import 'package:untitled3/core/utiles/app_constance.dart';
 import 'package:untitled3/core/utiles/app_string.dart';
-import 'package:untitled3/core/utiles/dummy.dart';
-import 'package:untitled3/movies/domain/usercases/get%20_nowplaying_movies_usercase.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_block.dart';
 import 'package:untitled3/movies/pressentaion/controller/movies_state.dart';
 import 'package:untitled3/movies/pressentaion/screen/movie_datails_screen.dart';
@@ -45,15 +41,6 @@ class NowPlayingComponent extends StatelessWidget {
                                   MovieDatailsScreen(
                                     id: item.id,
                                   )));
-
-                      /// required int id,
-                      ///  required String backdropPath,
-                      ///  required String overview,
-                      ///  required String releaseDate,
-                      ///  required String title,
-                      ///  required int runtime,
-                      ///  required double voteAverage,
-                      ///  required List  genres,l
                     },
                     child: Stack(
                       children: [
