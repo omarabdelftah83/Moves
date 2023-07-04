@@ -1,7 +1,11 @@
 
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
+
 class AppConstance{
+ static const Color black=CupertinoColors.darkBackgroundGray;
  static const String baseUrl="https://api.themoviedb.org/3";
  static const String apiKay="9455c7fc57df114e23d6837e36211cfe";
  static const String nowPlayingMoviesPath='$baseUrl/movie/now_playing?api_key=$apiKay';

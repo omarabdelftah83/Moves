@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled3/core/utiles/app_string.dart';
 import 'package:untitled3/movies/domain/entities/movie.dart';
 ////import 'package:untitled3/movies/pressentaion/screen/movies_screan.dart';
@@ -23,7 +24,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+
       title: AppString.appName,
+      theme: ThemeData(fontFamily: GoogleFonts.openSans().fontFamily),
+  themeMode: ThemeMode.dark,
       home:Home(),
     );
   }
